@@ -1,0 +1,166 @@
+.dashboard-preview {
+  background: var(--bg-secondary);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-lg);
+}
+
+.dashboard-card {
+  background: var(--bg-card);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.dashboard-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.chart-container {
+  margin-bottom: var(--space-lg);
+}
+
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  justify-content: space-between;
+  padding: var(--space-xs) 0;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.legend-item span:last-child {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Styles pour les transactions */
+.transactions .transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.transaction-item:hover {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+.transaction-info {
+  flex: 1;
+}
+
+.transaction-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.transaction-category {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.transaction-details {
+  text-align: right;
+}
+
+.transaction-amount {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.transaction-amount.positive {
+  color: var(--positive);
+}
+
+.transaction-amount.negative {
+  color: var(--negative);
+}
+
+.transaction-date {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Styles pour les statistiques */
+.stats .stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stat-value.positive {
+  color: var(--positive);
+}
+
+.stat-value.negative {
+  color: var(--negative);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-card {
+    padding: var(--space-lg);
+  }
+}

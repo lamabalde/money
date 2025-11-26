@@ -1,0 +1,554 @@
+/* Settings.css */
+.settings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.settings-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.settings-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.settings-header p {
+  font-size: 1.1em;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.settings-sidebar {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar-item {
+  width: 100%;
+  padding: 18px 20px;
+  text-align: left;
+  border: none;
+  background: none;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-item:hover {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+.sidebar-item.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.settings-content {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  min-height: 600px;
+}
+
+/* Profile Section */
+.profile-section h2,
+.password-section h2,
+.talent-section h2 {
+  color: #2c3e50;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  font-weight: 600;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  border-left: 5px solid #3498db;
+}
+
+.avatar-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.profile-info h3 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.talent-badge {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
+}
+
+.status-badge {
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+  box-shadow: 0 3px 10px rgba(46, 204, 113, 0.3);
+}
+
+.status-badge.inactive {
+  background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+  color: white;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #3498db;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-card label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-input, .info-textarea {
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+.info-input:focus, .info-textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  transform: translateY(-1px);
+}
+
+.info-static {
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  margin: 0;
+  color: #7f8c8d;
+  font-weight: 500;
+  border: 2px dashed #e9ecef;
+}
+
+/* Buttons */
+.save-button {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+  padding: 18px 35px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+  background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+}
+
+/* Password Section */
+.password-section, .talent-section {
+  max-width: 700px;
+}
+
+.section-description {
+  color: #7f8c8d;
+  margin-bottom: 35px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #e74c3c;
+}
+
+.password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.form-input {
+  padding: 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.password-strength {
+  margin-top: 15px;
+}
+
+.strength-text {
+  font-size: 13px;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.strength-bar {
+  height: 6px;
+  background: #ecf0f1;
+  border-radius: 3px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.strength-fill.weak {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  width: 30%;
+}
+
+.strength-fill.medium {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  width: 60%;
+}
+
+.strength-fill.strong {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  width: 90%;
+}
+
+.strength-fill.very-strong {
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+  width: 100%;
+}
+
+.password-requirements {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 25px;
+  border-radius: 12px;
+  margin: 25px 0;
+  border-left: 4px solid #2ecc71;
+}
+
+.password-requirements h4 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.1em;
+}
+
+.password-requirements ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.password-requirements li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  padding: 5px 0;
+}
+
+.password-button {
+  margin-top: 25px;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.password-button:hover {
+  background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+}
+
+/* Talent Section */
+.talent-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.tags-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  min-height: 60px;
+  align-items: center;
+}
+
+.tag {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.tag::before {
+  content: "×";
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.tag:hover::before {
+  opacity: 1;
+}
+
+.add-tag {
+  background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.add-tag:hover {
+  background: linear-gradient(135deg, #7f8c8d 0%, #95a5a6 100%);
+}
+
+.info-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .settings-sidebar {
+    position: static;
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .sidebar-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 15px;
+  }
+  
+  .settings-header {
+    padding: 20px;
+  }
+  
+  .settings-header h1 {
+    font-size: 2em;
+  }
+  
+  .settings-content {
+    padding: 25px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .password-requirements ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-header h1 {
+    font-size: 1.6em;
+  }
+  
+  .settings-content {
+    padding: 20px;
+  }
+  
+  .avatar-large {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5em;
+  }
+  
+  .save-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.settings-content > div {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Scrollbar personnalisé */
+.settings-sidebar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.settings-sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.settings-sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+.settings-sidebar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
