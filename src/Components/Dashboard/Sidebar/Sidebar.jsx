@@ -6,9 +6,7 @@ const Sidebar = ({ activeSection, onSectionChange, onLogout }) => {
     { id: 'transactions', icon: '💳', label: 'Transactions' },
     { id: 'categories', icon: '🏷️', label: 'Catégories' },
     { id: 'export', icon: '📤', label: 'Export' },
-    { id: 'settings', icon: '⚙️', label: 'Paramètres' },
-    { id: 'transactions', icon: '💳', label: 'Transactions' },
-
+    { id: 'settings', icon: '⚙️', label: 'Paramètres' }
   ];
 
   return (

@@ -11,7 +11,6 @@ import Footer from './Components/Footer/Footer';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
-import Transactions from "./pages/Transactions";
 import './App.css';
 
 // Composant de navigation
